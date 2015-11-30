@@ -23,9 +23,7 @@
         "bin/random_key"
     ],
     "minimum-stability": "dev",
-    {
-        "archive": {
-            "exclude": ["demo.php"]
-        }
+    "archive": {
+        "exclude": ["demo.php"]
     }
 }
