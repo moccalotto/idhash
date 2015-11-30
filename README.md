@@ -1,6 +1,6 @@
-# IntHash
+# IdHash
 
-An reversible integer encoder/decoder for PHP.
+A reversible (integer) ID obfuscator
 
 Create hashes like the ones used by imgur, pastebin, youtube, etc.
 
