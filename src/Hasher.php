@@ -45,6 +45,7 @@ class Hasher
         $size = $this->keyLength;
         $space = $this->key;
         $result = '';
+
         while ($q > 0) {
             $remainder = $q % $size;
             $q = floor($q / $size);
