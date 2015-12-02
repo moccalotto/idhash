@@ -1,9 +1,9 @@
 <?php
 
-namespace Moccalotto\IntHash;
+namespace Moccalotto\IdHash;
 
 /**
- * Class for creating a randomized IntHash key.
+ * Class for creating a randomized IdHash key.
  */
 class RandomizedKey implements Contracts\Key
 {

@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Moccalotto\\IntHash\\": "src/"
+            "Moccalotto\\IdHash\\": "src/"
         }
     },
     "autoload-dev": {

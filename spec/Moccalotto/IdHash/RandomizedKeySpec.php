@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Moccalotto\IntHash;
+namespace spec\Moccalotto\IdHash;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -9,13 +9,13 @@ class RandomizedKeySpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Moccalotto\IntHash\RandomizedKey');
+        $this->shouldHaveType('Moccalotto\IdHash\RandomizedKey');
     }
 
     function it_is_initializable_with_custom_alphabet()
     {
         $this->beConstructedWith('abc');
-        $this->shouldHaveType('Moccalotto\IntHash\RandomizedKey');
+        $this->shouldHaveType('Moccalotto\IdHash\RandomizedKey');
         $this->keyString()->shouldHaveCharsFrom('abc');
     }
 

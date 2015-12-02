@@ -1,11 +1,11 @@
 <?php
 
-namespace Moccalotto\IntHash;
+namespace Moccalotto\IdHash;
 
 use DomainException;
 
 /**
- * Class for creating a IntHash key from a string
+ * Class for creating a IdHash key from a string
  */
 class StringKey implements Contracts\Key
 {

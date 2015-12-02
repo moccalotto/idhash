@@ -1,8 +1,8 @@
 <?php
 
-namespace Moccalotto\IntHash;
+namespace Moccalotto\IdHash;
 
-use Moccalotto\IntHash\Contracts\Key;
+use Moccalotto\IdHash\Contracts\Key;
 
 /**
  * Integer Hasher class

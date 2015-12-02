@@ -31,7 +31,7 @@ if (is_file($autoload = __DIR__ . '/../vendor/autoload.php')) {
     die(1);
 }
 
-$randomized_key = new Moccalotto\IntHash\RandomizedKey;
+$randomized_key = new Moccalotto\IdHash\RandomizedKey;
 
 print $randomized_key->keyString() . PHP_EOL;
 

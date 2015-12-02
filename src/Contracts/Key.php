@@ -1,6 +1,6 @@
 <?php
 
-namespace Moccalotto\IntHash\Contracts;
+namespace Moccalotto\IdHash\Contracts;
 
 interface Key
 {

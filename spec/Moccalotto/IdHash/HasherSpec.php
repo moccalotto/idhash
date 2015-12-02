@@ -1,17 +1,17 @@
 <?php
 
-namespace spec\Moccalotto\IntHash;
+namespace spec\Moccalotto\IdHash;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
-use Moccalotto\IntHash\StringKey;
+use Moccalotto\IdHash\StringKey;
 
 class HasherSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
         $this->beConstructedWith(new StringKey('fubar'));
-        $this->shouldHaveType('Moccalotto\IntHash\Hasher');
+        $this->shouldHaveType('Moccalotto\IdHash\Hasher');
     }
 
     function it_can_encode_an_integer()

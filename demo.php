@@ -1,7 +1,7 @@
 <?php
 
-use Moccalotto\IntHash\Hasher;
-use Moccalotto\IntHash\StringKey;
+use Moccalotto\IdHash\Hasher;
+use Moccalotto\IdHash\StringKey;
 
 require 'vendor/autoload.php';
 
