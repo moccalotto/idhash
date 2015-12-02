@@ -41,9 +41,12 @@ class RandomizedKey implements Contracts\Key
     {
         $actual_key = $base === null ? $this->defaultKey : $base;
 
-        $this->key = str_shuffle(
-            $this->removeDuplicateCharacters($actual_key)
-        );
+        $key_candidate = '';
+        do {
+            $key_candidate = str_shuffle($actual_key);
+        } while ($key_candidate == $actual_key);
+
+        $this->key = $this->removeDuplicateCharacters($key_candidate);
     }
 
     /**
