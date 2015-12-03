@@ -39,6 +39,11 @@ class StringKey implements Contracts\Key
         if ($this->hasDuplicateChars($key)) {
             throw new DomainException('The input key contains duplicate characters');
         }
+
+        if (strlen($key) < 2) {
+            throw new DomainException('The input key must have a length of at least 2');
+        }
+
         $this->key = $key;
     }
 

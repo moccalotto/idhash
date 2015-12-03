@@ -5,9 +5,9 @@ namespace Moccalotto\IdHash;
 use Moccalotto\IdHash\Contracts\Key;
 
 /**
- * Integer Hasher class
+ * Integer IntHasher class
  */
-class Hasher
+class IntHasher implements Contracts\IntHasher
 {
     /**
      * The base key string.
@@ -24,6 +24,8 @@ class Hasher
     protected $keyLength;
 
     /**
+     * Constructor
+     *
      * @param string $key
      */
     public function __construct(Key $key)

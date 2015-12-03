@@ -31,8 +31,10 @@ if (is_file($autoload = __DIR__ . '/../vendor/autoload.php')) {
     die(1);
 }
 
-$randomized_key = new Moccalotto\IdHash\RandomizedKey;
+$keyspace = empty($_SERVER['argv'][1]) ? null : $_SERVER['argv'][1];
 
-print $randomized_key->keyString() . PHP_EOL;
+$key_factory = new Moccalotto\IdHash\RandomKeyFactory($keyspace);
+
+print $key_factory->key()->keyString() . PHP_EOL;
 
 die(0);
