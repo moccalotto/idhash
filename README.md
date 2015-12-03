@@ -1,4 +1,5 @@
 # IdHash
+[![Build Status](https://travis-ci.org/moccalotto/idhash.svg)](https://travis-ci.org/moccalotto/idhash)
 
 A reversible (integer) ID obfuscator
 
