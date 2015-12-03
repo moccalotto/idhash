@@ -25,5 +25,8 @@
     "minimum-stability": "dev",
     "archive": {
         "exclude": ["demo.php"]
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.4"
     }
 }
