@@ -7,6 +7,23 @@ Create hashes like the ones used by imgur, pastebin, youtube, etc.
 
 Default keyspace is the standard base62 keyspace.
 
+## Installation
+
+To add this package as a local, per-project dependency to your project, simply add a dependency on
+ `moccalotto/idhash` to your project's `composer.json` file like so:
+
+```json
+{
+    "require": {
+        "moccalotto/idhash": "~0.8"
+    }
+}
+```
+
+Alternatively simply call `composer require moccalotto/idhash`
+
+
+
 ```php
 <?php
 
