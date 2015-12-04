@@ -3,7 +3,6 @@
 namespace spec\Moccalotto\IdHash;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class StringKeySpec extends ObjectBehavior
 {

@@ -5,7 +5,7 @@ namespace Moccalotto\IdHash\Contracts;
 interface KeyFactory
 {
     /**
-     * Generate a new key
+     * Generate a new key.
      *
      * @return Key
      */

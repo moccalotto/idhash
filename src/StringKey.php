@@ -5,7 +5,7 @@ namespace Moccalotto\IdHash;
 use DomainException;
 
 /**
- * Class for creating a IdHash key from a string
+ * Class for creating a IdHash key from a string.
  */
 class StringKey implements Contracts\Key
 {
@@ -15,9 +15,10 @@ class StringKey implements Contracts\Key
     protected $key;
 
     /**
-     * Detect duplicate characters in a given string
+     * Detect duplicate characters in a given string.
      *
      * @param string $string
+     *
      * @return bool
      */
     protected function hasDuplicateChars($string)
@@ -29,9 +30,10 @@ class StringKey implements Contracts\Key
     }
 
     /**
-     * Constructor
+     * Constructor.
      *
      * @param string $key The letters in the keyspace.
+     *
      * @throws DomainException if the input key contains duplicate characters.
      */
     public function __construct($key)
@@ -48,7 +50,7 @@ class StringKey implements Contracts\Key
     }
 
     /**
-     * Get the hash key as a string
+     * Get the hash key as a string.
      *
      * @return string
      */
@@ -58,9 +60,9 @@ class StringKey implements Contracts\Key
     }
 
     /**
-     * Get the number of characters in the key
+     * Get the number of characters in the key.
      *
-     * @return integer
+     * @return int
      */
     public function keylength()
     {

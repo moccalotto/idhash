@@ -5,7 +5,7 @@ namespace Moccalotto\IdHash;
 use Moccalotto\IdHash\Contracts\Key;
 
 /**
- * Integer IntHasher class
+ * Integer IntHasher class.
  */
 class IntHasher implements Contracts\IntHasher
 {
@@ -24,7 +24,7 @@ class IntHasher implements Contracts\IntHasher
     protected $keyLength;
 
     /**
-     * Constructor
+     * Constructor.
      *
      * @param string $key
      */
@@ -51,7 +51,7 @@ class IntHasher implements Contracts\IntHasher
         while ($q > 0) {
             $remainder = $q % $size;
             $q = floor($q / $size);
-            $result = $space[$remainder] . $result;
+            $result = $space[$remainder].$result;
         }
 
         return $result;

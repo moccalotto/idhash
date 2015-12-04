@@ -3,7 +3,6 @@
 namespace spec\Moccalotto\IdHash;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 
 class RandomKeyFactorySpec extends ObjectBehavior
 {
@@ -55,7 +54,6 @@ class RandomKeyFactorySpec extends ObjectBehavior
         $this->key()->keyString()->shouldHaveCharsFrom('abc');
     }
 
-
     public function getMatchers()
     {
         return [
@@ -68,6 +66,7 @@ class RandomKeyFactorySpec extends ObjectBehavior
                         return false;
                     }
                 }
+
                 return true;
             },
         ];

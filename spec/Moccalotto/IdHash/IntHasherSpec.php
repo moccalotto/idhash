@@ -3,7 +3,6 @@
 namespace spec\Moccalotto\IdHash;
 
 use PhpSpec\ObjectBehavior;
-use Prophecy\Argument;
 use Moccalotto\IdHash\StringKey;
 
 class IntHasherSpec extends ObjectBehavior

@@ -18,9 +18,10 @@ class RandomKeyFactory implements KeyFactory
     protected $keyspace;
 
     /**
-     * Remove duplicate characters from a given string
+     * Remove duplicate characters from a given string.
      *
      * @param string $string
+     *
      * @return string
      */
     protected function removeDuplicateCharacters($string)
@@ -33,7 +34,7 @@ class RandomKeyFactory implements KeyFactory
     }
 
     /**
-     * Constructor
+     * Constructor.
      *
      * @param string $keyspace The letters in the keyspace.
      */
@@ -51,7 +52,7 @@ class RandomKeyFactory implements KeyFactory
     }
 
     /**
-     * Get a pseudo-randomized StringKey
+     * Get a pseudo-randomized StringKey.
      *
      * @return StringKey
      */
