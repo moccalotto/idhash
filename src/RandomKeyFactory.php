@@ -15,6 +15,9 @@ class RandomKeyFactory implements KeyFactory
      */
     const DEFAULT_KEYSPACE = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
+    /**
+     * @var string
+     */
     protected $keyspace;
 
     /**
