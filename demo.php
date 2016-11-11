@@ -22,7 +22,7 @@ $key = $key_generator->key();
 $IntHasher = new IntHasher($key);
 
 // generate new input value
-$input_int = mt_rand();
+$input_int = bcmul(mt_rand(2**60, 2**62), mt_rand());
 
 // encode the integer into a hash
 $hash_str = $IntHasher->intToHash($input_int);
@@ -33,8 +33,8 @@ $output_int = $IntHasher->hashToInt($hash_str);
 // print the process values to screen
 printf('The generated key:  %s%s', $key->keyString(), PHP_EOL);
 printf('Number to encode:   %s%s', $input_int, PHP_EOL);
-printf('The encoded hash:   %s%s', $hash_str, PHP_EOL);
 printf('Decoded number:     %s%s', $output_int, PHP_EOL);
+printf('The encoded hash:   %s%s', $hash_str, PHP_EOL);
 printf('Success:            %s%s', $input_int === $output_int ? 'Yes' : 'NO!', PHP_EOL);
 
 die($input_int !== $output_int);
