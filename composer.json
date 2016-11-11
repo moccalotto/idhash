@@ -27,6 +27,6 @@
         "exclude": ["demo.php"]
     },
     "require-dev": {
-        "phpspec/phpspec": "^2.4"
+        "phpspec/phpspec": "^3.1"
     }
 }
