@@ -23,7 +23,7 @@ class IntHasherSpec extends ObjectBehavior
     public function it_can_decode_an_encoded_integer()
     {
         $this->beConstructedWith(new StringKey('fubar'));
-        $this->hashToInt('ufuau')->shouldBe(666);
-        $this->hashToInt('uafrr')->shouldBe(1024);
+        $this->hashToInt('ufuau')->shouldBe('666');
+        $this->hashToInt('uafrr')->shouldBe('1024');
     }
 }
