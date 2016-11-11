@@ -32,7 +32,7 @@ $output_int = $IntHasher->hashToInt($hash_str);
 
 // print the process values to screen
 printf('The generated key:  %s%s', $key->keyString(), PHP_EOL);
-printf('Number to encode:   %d%s', $input_int, PHP_EOL);
+printf('Number to encode:   %s%s', $input_int, PHP_EOL);
 printf('The encoded hash:   %s%s', $hash_str, PHP_EOL);
 printf('Decoded number:     %s%s', $output_int, PHP_EOL);
 printf('Success:            %s%s', $input_int === $output_int ? 'Yes' : 'NO!', PHP_EOL);
