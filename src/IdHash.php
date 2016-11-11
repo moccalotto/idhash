@@ -8,9 +8,9 @@ use Moccalotto\IdHash\StringKey;
 use Moccalotto\IdHash\Contracts\Key;
 
 /**
- * Integer IntHash facade class.
+ * Facade for the IntHasher class.
  */
-class IntHash
+class IdHash
 {
     /**
      * Default (singleton-style) key.
