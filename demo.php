@@ -1,6 +1,6 @@
 <?php
 
-use Moccalotto\IdHash\IntHasher;
+use Moccalotto\IdHash\IdHash;
 use Moccalotto\IdHash\StringKey;
 use Moccalotto\IdHash\RandomKeyFactory;
 
@@ -18,17 +18,15 @@ $key_generator = new RandomKeyFactory($keyspace);
 // generate a random key
 $key = $key_generator->key();
 
-// initialize a new IntHasher
-$IntHasher = new IntHasher($key);
 
 // generate new input value
 $input_int = bcmul(mt_rand(2**60, 2**62), mt_rand());
 
 // encode the integer into a hash
-$hash_str = $IntHasher->intToHash($input_int);
+$hash_str = IdHash::with($key)->intToHash($input_int);
 
 // decode the hash into an integer
-$output_int = $IntHasher->hashToInt($hash_str);
+$output_int = IdHash::with($key)->hashToInt($hash_str);
 
 // print the process values to screen
 printf('The generated key:  %s%s', $key->keyString(), PHP_EOL);
