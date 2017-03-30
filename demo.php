@@ -1,7 +1,6 @@
 <?php
 
 use Moccalotto\IdHash\IdHash;
-use Moccalotto\IdHash\StringKey;
 use Moccalotto\IdHash\RandomKeyFactory;
 
 require 'vendor/autoload.php';
@@ -18,9 +17,8 @@ $key_generator = new RandomKeyFactory($keyspace);
 // generate a random key
 $key = $key_generator->key();
 
-
 // generate new input value
-$input_int = bcmul(mt_rand(2**60, 2**62), mt_rand());
+$input_int = bcmul(mt_rand(2 ** 60, 2 ** 62), mt_rand());
 
 // encode the integer into a hash
 $hash_str = IdHash::with($key)->intToHash($input_int);

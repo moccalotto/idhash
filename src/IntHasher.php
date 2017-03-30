@@ -63,9 +63,9 @@ class IntHasher implements Contracts\IntHasher
      * @param string $hash
      *
      * @return string The decoded number.
-     *     Caveat: the number may be too large to be converted into an integer.
-     *     Be sure to check the size of the number against PHP_INT_MAX if you
-     *     want to do integer math on the number.
+     *                Caveat: the number may be too large to be converted into an integer.
+     *                Be sure to check the size of the number against PHP_INT_MAX if you
+     *                want to do integer math on the number.
      */
     public function hashToInt($hash)
     {

@@ -4,7 +4,6 @@ namespace Moccalotto\IdHash;
 
 use LogicException;
 use InvalidArgumentException;
-use Moccalotto\IdHash\StringKey;
 use Moccalotto\IdHash\Contracts\Key;
 
 /**
@@ -27,6 +26,7 @@ class IdHash
      * - Other values will cause an InvalidArgumentException
      *
      * @param string|Key $key
+     *
      * @return Key
      *
      * @throws InvalidArgumentException if $key is not string or Key
@@ -48,7 +48,7 @@ class IdHash
     }
 
     /**
-     * Create a hasher with a given key
+     * Create a hasher with a given key.
      *
      * @param string|Key $key
      *
@@ -60,7 +60,7 @@ class IdHash
     }
 
     /**
-     * Set the default key (singleton-style)
+     * Set the default key (singleton-style).
      *
      * @param string|Key $key
      */
@@ -81,6 +81,7 @@ class IdHash
         if (empty(static::$defaultKey)) {
             throw new LogicException('You have not yet initialized the default key');
         }
+
         return static::with(static::$defaultKey)->intToHash($number);
     }
 
@@ -89,13 +90,14 @@ class IdHash
      *
      * @param string $hash
      *
-     * @return string a string containing the number - the number may be too large for integers.
+     * @return string a string containing the number - the number may be too large for integers
      */
     public static function hashToInt($hash)
     {
         if (empty(static::$defaultKey)) {
             throw new LogicException('You have not yet initialized the default key');
         }
+
         return static::with(static::$defaultKey)->hashToInt($hash);
     }
 }

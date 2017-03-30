@@ -39,7 +39,7 @@ class RandomKeyFactory implements KeyFactory
     /**
      * Constructor.
      *
-     * @param string $keyspace The letters in the keyspace.
+     * @param string $keyspace the letters in the keyspace
      */
     public function __construct($keyspace = null)
     {

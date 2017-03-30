@@ -32,9 +32,9 @@ class StringKey implements Contracts\Key
     /**
      * Constructor.
      *
-     * @param string $key The letters in the keyspace.
+     * @param string $key the letters in the keyspace
      *
-     * @throws DomainException if the input key contains duplicate characters.
+     * @throws DomainException if the input key contains duplicate characters
      */
     public function __construct($key)
     {
