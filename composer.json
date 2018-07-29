@@ -25,6 +25,6 @@
         "exclude": ["/demo.php", "/spec"]
     },
     "require-dev": {
-        "phpspec/phpspec": "^2."
+        "phpspec/phpspec": "^2.5"
     }
 }
