@@ -17,14 +17,12 @@
             "Moccalotto\\IdHash\\": "src/"
         }
     },
-    "autoload-dev": {
-    },
     "bin": [
         "bin/random_key"
     ],
     "minimum-stability": "dev",
     "archive": {
-        "exclude": ["demo.php"]
+        "exclude": ["/demo.php", "/spec"]
     },
     "require-dev": {
         "phpspec/phpspec": "^3.1"
