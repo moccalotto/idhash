@@ -15,7 +15,7 @@ To add this package as a local, per-project dependency to your project, simply a
 ```json
 {
     "require": {
-        "moccalotto/idhash": "~0.8"
+        "moccalotto/idhash": "~0.9"
     }
 }
 ```
