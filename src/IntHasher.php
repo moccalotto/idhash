@@ -2,6 +2,7 @@
 
 namespace Moccalotto\IdHash;
 
+use RuntimeException;
 use Moccalotto\IdHash\Contracts\Key;
 
 /**
@@ -26,7 +27,7 @@ class IntHasher implements Contracts\IntHasher
     /**
      * Constructor.
      *
-     * @param string $key
+     * @param Key $key
      */
     public function __construct(Key $key)
     {
@@ -43,14 +44,14 @@ class IntHasher implements Contracts\IntHasher
      */
     public function intToHash($number)
     {
-        $q = bcadd($number, 0, 0); // turn number into a bcmath compatible number
+        $q = bcadd((string) $number, '0', 0); // turn number into a bcmath compatible number
         $size = $this->keyLength;
         $space = $this->key;
         $result = '';
 
-        while (bccomp($q, 0) === 1) {
-            $remainder = bcmod($q, $size);
-            $q = bcdiv($q, $size); // automatic floor
+        while (bccomp($q, '0') === 1) {
+            $remainder = (int) bcmod($q, (string) $size);
+            $q = bcdiv($q, (string) $size); // automatic floor
             $result = $space[$remainder] . $result;
         }
 
@@ -72,12 +73,26 @@ class IntHasher implements Contracts\IntHasher
         $size = $this->keyLength;
         $space = $this->key;
         $limit = strlen($hash);
-        $result = 0;
+        $result = '0';
 
         for ($i = 0; $i < $limit; ++$i) {
+            $pos = strpos($space, $hash[$i]);
+
+            /** @var string $pos */
+            if ($pos === false) {
+                throw new RuntimeException(sprintf(
+                    'Invalid hash entity at pos %d (%s) not found in keyspace',
+                    $i,
+                    $hash[$i]
+                ));
+            }
+
             $result = bcadd(
-                bcmul($size, $result),
-                strpos($space, $hash[$i])
+                bcmul(
+                    (string) $size,
+                    $result
+                ),
+                (string) $pos
             );
         }
 
